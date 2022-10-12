@@ -28,6 +28,5 @@ int main (){
     } while (producto != 0);
     cout << "El total de tu compra es de: \n" << total << endl;
 
-    //Being a function, it must return a value in this case 0
     return 0;
 }
