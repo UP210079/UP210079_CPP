@@ -7,7 +7,7 @@
 
 >UNIDAD 3
 ***  
- 1. [Bisección](https://github.com/UP210079/UP210079_CPP/blob/main/U2/01_ABC.cpp)
+ 1. [Bisección](https://github.com/UP210079/UP210079_CPP/blob/main/U3/01_Biseccion.cpp)
 
 ```
 double fnEcuacion1(double x)
@@ -45,7 +45,7 @@ int main()
 ```
 ![Biseccion](./img/biseccion.png "Biseccion")
 
- 2. [Grados a Radianes](https://github.com/UP210079/UP210079_CPP/blob/main/U2/02_renta.cpp)
+ 2. [Grados a Radianes](https://github.com/UP210079/UP210079_CPP/blob/main/U3/02_GradosARadianes.cpp)
 
 ```
 
@@ -65,8 +65,7 @@ int main( )
 ```
 ![Grados a Radianes](./img/gradosradianes.png "Grados a Radianes")
 
- 3. [Año Bisiesto](https://github.com/UP210079/UP210079_CPP/blob/main/U2/03_Tablas.cpp)
-
+ 3. [Año Bisiesto](https://github.com/UP210079/UP210079_CPP/blob/main/U3/03_A%C3%B1oBIsiesto.cpp)
 ```
 int main(){
       int a;
@@ -83,7 +82,7 @@ int main(){
 ```
 ![Año Bisiesto](./img/añobisiesto.png "Año Bisiesto")
 
- 4. [Coseno](https://github.com/UP210079/UP210079_CPP/blob/main/U2/04_Beneficios.cpp)
+ 4. [Coseno](https://github.com/UP210079/UP210079_CPP/blob/main/U3/04_Coseno.cpp)
 
 ```
 const double pi = std::acos(-1);
@@ -319,7 +318,7 @@ int main()
 
 </center>
 
-![AubreyAngry](./img/aungry.gif "AubreyAngry")
+![AubreySad](./img/ausad.gif "AubreySad")
 
 </center>
 
