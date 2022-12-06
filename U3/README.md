@@ -104,218 +104,153 @@ int main() {
 ```
 ![Coseno](./img/coseno.png "Coseno")
 
- 5. [Juegos](https://github.com/UP210079/UP210079_CPP/blob/main/U2/05_Juegos.cpp)
+ 5. [Desgloce](https://github.com/UP210079/UP210079_CPP/blob/main/U3/05_DesgloceDeMoneda.cpp)
+
+```
+int main(){
+    int dinero =8358, i=0;
+    int cambio[10]={1000,500,200,100,50,20,10,5,2,1};
+    while (dinero>0)
+    {
+        if (dinero>=cambio[i])
+        {
+            cout<<dinero/cambio[i]<< " billetes de  " <<cambio[i]<<endl;
+            dinero=dinero%cambio[i];
+        }
+        i++;
+    }
+    return 0;
+  
+ ```
+ ![Desgloce](./img/Desgloce.png "Desgloce")
+ ![Desgloce](./img/desglocecorrida.png "DesCorrida")
+ 
+   6. [Numeros Romanos](https://github.com/UP210079/UP210079_CPP/blob/main/U3/06_NumerosRomanos.cpp)
    
 ```
 
 int main(){
-    int edad;
-    int precio;
-    cout << "Introduce tu edad ";
-    cin >> edad;
-
-    if (edad < 4)
-        precio = 0;  
-    else if (edad >= 4 && edad <= 18)
-        precio = 5;
-    else if (edad > 18)
-        precio = 10;
-
-    cout << "Cantidad a pagar: $" << precio << endl;
-    cout << "Bienvenido a Michines Games" << endl;
-
-    return 0;
-}
-
-```
-![Juegos](./img/Juegos.png "Juegos")
-
- 6. [Pizza](https://github.com/UP210079/UP210079_CPP/blob/main/U2/06_Pizza.cpp)
-
-```
-
-int main()
-{
-
-    int pizza;
-    int typo;
-    int ingredientes = 0;
-
-    cout << "¿Qué tipo de pizza deseas? \n";
-    cout << "Elige 1 o 2 \n";
-    cout << "Pizza vegetariana = 1 \n";
-    cout << "Pizza normal = 2 \n";
-    cin >> typo;
-
-    if (typo == 1)
+    int n=2003;
+    int v;
+    int romanos[]={1000,900,500,400,100,90,50,40,10,9,5,4,1};
+    string NR[]={"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+    string numero="";
+    int i=0;
+    while(n>0)
     {
-        cout << "Seleccionaste Pizza Vegetariana \n";
-        cout << "Elige un ingrediente \n";
-        cout << "Puedes elegir entre pimiento y tofu \n";
-        cout << "Elige 1 o 2 \n";
-        cout << "Pimiento = 1 \n";
-        cout << "Tofu = 2 \n";
-        cin >> ingredientes;
-
-        if (ingredientes == 1)
+        if (n>=romanos[i])
         {
-            cout << "Seleccionaste pimiento \n";
-            cout << "Tu pizza incluirá tomate, pimiento, y queso de soya \n";
-            cout << "\n";
+            v=n/romanos[i];
+            n=n%romanos[i];
+            for (int j = 0; j < v; j++)
+            {
+                numero=numero+NR[i];
+            }
         }
-        else if (ingredientes == 2)
-        {
-            cout << "Seleccionaste tofu \n";
-            cout << "Tu pizza incluirá tomate, tofu y queso de soya \n";
-            cout << "\n";
-        }
+        i++;
     }
-
-    if (typo == 2)
-    {
-        cout << "Seleccionaste Pizza Normal \n";
-        cout << "Elige un ingrediente \n";
-        cout << "Puedes elegir entre jamón, salmón y peperoni \n";
-        cout << "Elige 1, 2 o 3 \n";
-        cout << "Pepperoni = 1 \n";
-        cout << "Jamón = 2 \n";
-        cout << "Salmón = 4 \n";
-        cout << "\n";
-        cin >> ingredientes;
-
-        if (ingredientes == 1)
-        {
-            cout << "Seleccionaste peperoni \n";
-            cout << "Tu pizza incluirá peperoni, tomate y queso mozarella \n";
-            cout << "\n";
-        }
-        else if (ingredientes == 2)
-        {
-            cout << "Seleccionaste jamón \n";
-            cout << "Tu pizza incluirá jamón, tomate y queso mozarella \n";
-            cout << "\n";
-        }
-        else if (ingredientes == 3)
-        {
-            cout << "Seleccionaste salmón \n";
-            cout << "Tu pizza incluirá salmón, tomate y queso mozarella \n";
-            cout << "\n";
-        }
-    }
-
-    cout << "Tu pizza estará lista pronto \n";
-    cout << "Gracias por visitar Michin Pizzeria";
-    cout << "\n";
-    cout << "\n";
-    cout << "\n";
-
+    cout<<numero;
     return 0;
-}
+  
+ ```
+ ![NumerosRomanos](./img/numerosrom.png "numerosrom")
+ ![NumerosRomanos](./img/numerosromcorrida.png "RomCorrida")
+ 
+ 7. [RFC](https://github.com/UP210079/UP210079_CPP/blob/main/U3/07_RFC.cpp)
+ 
+ ```
 
-```
-![Pizza](./img/Pizza.png "Pizza")
-
- 7. [Temperatura](https://github.com/UP210079/UP210079_CPP/blob/main/U2/07_Temperatura.cpp)
-
-```
 
 int main(){
-    float temperatura;
-    int contador = 1;
-    float tempeAcum = 0;
-    int temperatura_min = 9999, temperatura_max = -9999;
-    do
+    string nombre="Carlos";
+    string AP="Esparza";
+    string AM="Lopez";
+    string fe="17/11/2022";
+    string rfc="";
+    int v=nombre.length(); 
+    int p=0;
+    
+    rfc=rfc+AP[0];
+    for (int i = 1; i < v && p<1; i++)
     {
-        cout << "Dame una temperatura" << endl;
-        cin >> temperatura;
-        tempeAcum +=temperatura;
+        if (AP[i]=='a' || AP[i]=='e' || AP[i]=='i' || AP[i]=='o' || AP[i]=='u' )
+        {
+            rfc=rfc+AP[i];
+            p++;
+        }  
+    }
 
-        contador ++;
-        if (temperatura <= temperatura_min)
-        {
-            temperatura_min=temperatura;
-        }
-        if (temperatura >= temperatura_max)
-        {
-            temperatura_max=temperatura;
-        }
-    } while (contador <=6);
-    cout << "La temperatura de hoy es: " << tempeAcum/6 <<endl;
-    cout << "La temperatura mínima es: " << temperatura_min<< endl;
-    cout << "La temperatura máxima es: " << temperatura_max << endl;
+    int d1=fe.find_last_of("/");
+    int d2=fe.find("/");
+    rfc=rfc+AM[0]+nombre[0]+fe.substr(d1+1,4)+fe.substr(d2+1,2)+fe.substr(0,2);
+    
+    v=rfc.length();
+    for (int i = 0; i < v; i++)
+    {
+        rfc[i]=toupper(rfc[i]);
+    }
+    cout<<nombre<<" RFC: "<<rfc;
     return 0;
-}
-
-```
-![Temperatura](./img/Temperatura.png "Temperatura")
-
- 8. [Precios](https://github.com/UP210079/UP210079_CPP/blob/main/U2/08_Precios.cpp)
-
-```
-
-int main (){
-
-
-    int producto;
-    float precio;
-    float calculo=0;
-    float total=0;
-    int vuelta;
-
-    cout << "Bienvenido a Michin Store \n";
-
-    do
-    {
+    
+ ```
+  ![RFC](./img/rfc.png "RFC")
+  ![RFC](./img/rfccorrida.png "RFCCorrida")
+  
+  8. [Vector](https://github.com/UP210079/UP210079_CPP/blob/main/U3/08_OrdenarVector.cpp)
+ 
+ ```
+void Ordenar(int x[],int v){
+    int m,s,c;
+    do{
+        c=0;
+        for (int i = 0; i < v; i++)
+        {
+            s=i+1;
+            if (x[i]>x[s])
+            {
+                m=x[s]; x[s]=x[i]; x[i]=m;
+                c++;
+            }   
+        }
         
-        cout << "Dame el número de productos \n";
-        cin  >> producto;
-
-        if (producto !=0 and producto >0){
-
-            cout << "¿Cuál es el precio de el producto? \n";
-            cin >> precio;
-            total +=(precio*producto);
-        }
-
-    } while (producto != 0);
-    cout << "El total de tu compra es de: \n" << total << endl;
-
-    return 0;
+    } while(c>0);
 }
 
-```
-![Precios](./img/Precios.png "Precios")
-
-9. [BinarioADecimal](https://github.com/UP210079/UP210079_CPP/blob/main/U2/09_BinarioADecimal.cpp)
-
-```
-
-int main()
-{
-    int exp,digito;
-    double binario, decimal;
-
-   cout << "Introduce el número: ";
-   cin >> binario;
-   exp=0;
-   decimal=0;
-   while(((int)(binario/10))!=0)
-   {
-           digito = (int)binario % 10;
-           decimal = decimal + digito * pow(2.0,exp);
-           exp++;
-           binario=(int)(binario/10);
-   }
-
-   decimal=decimal + binario * pow(2.0,exp);
-   cout << endl << "Decimal: " << decimal << endl;
-   
+int main(){
+    int c[]={9,8,7,6,5,4,3,2,1,0};
+    int n=sizeof(c)/4;
+    Ordenar(c,n);
+    for (int i = 0; i < n; i++)
+    {
+        cout<<c[i]<<endl;
+    }
     return 0;
+    
+ ```
+  ![Vector](./img/vector.png "Vector")
+  ![Vector](./img/vectorcorrida.png "VectorCorrida")
+  
+   9. [FuncionRecursiva](https://github.com/UP210079/UP210079_CPP/blob/main/U3/09_FuncionRecursiva.cpp)
+  
+   ```
+
+double factorial(int numero){
+    if (numero == 1){
+        return 1;
+    }else{
+        return numero*factorial(numero-1);
+    }
 }
 
-```
-![Binario a Decimal](./img/BInario.png "Binario a decimal")
-
+int main(){
+    int n=6, f;
+    f=factorial(n);
+    cout<<"El factorial de "<<n<<" es "<<f;
+    
+ ```
+   ![FuncionRecursiva](./img/funcionrecursiva.png "FRecursiva")
+   ![FuncionnRecursiva](./img/recursivacorrida.png "FRecursivaCorrida")
+  
 </center>
 
 ![AubreySad](./img/ausad.gif "AubreySad")
